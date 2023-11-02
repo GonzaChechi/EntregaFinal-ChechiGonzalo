@@ -1,4 +1,14 @@
+/*! -------------------------RESET-------------------------------- */
+html {
+  font-size: 62.5%;
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box; }
+  html body {
+    font-size: 16px; }
+/*! -------------------------HEADER-------------------------------- */
 header h1 {
-  text-align: center; }
+  text-align: center;
+  font-size: 3.8rem; }
   header h1 span {
-    font-size: 20px; }
+    font-size: 2rem; }
