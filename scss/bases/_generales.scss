@@ -11,6 +11,22 @@ html {
     body {
         font-size: 16px;
         font-family: "Noto Sans", sans-serif;
+        h1{
+            font-size: nth($font-size, 3 );
+            font-weight: nth($font-weight,3 );
+        }
+        h2{
+            font-size: nth($font-size, 2 );
+            font-weight: nth($font-weight,2 );
+        }
+        h3{
+            font-size: nth($font-size, 1 );
+            font-weight: nth($font-weight,2 );
+        }
+        p{
+            font-size: nth($font-size, 1 );
+            font-weight: nth($font-weight,1 );
+        }
     }
 }
 

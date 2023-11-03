@@ -7,28 +7,52 @@ html {
   html body {
     font-size: 16px;
     font-family: "Noto Sans", sans-serif; }
+    html body h1 {
+      font-size: 4rem;
+      font-weight: 700; }
+    html body h2 {
+      font-size: 3rem;
+      font-weight: 400; }
+    html body h3 {
+      font-size: 2rem;
+      font-weight: 400; }
+    html body p {
+      font-size: 2rem;
+      font-weight: 200; }
 
 .contenedor {
   width: 120rem;
   margin: 0 auto; }
 
-header h1 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 700; }
-  header h1 span {
-    font-size: 2rem; }
+header {
+  height: 5rem; }
+  header h1 {
+    height: 100%;
+    margin: 0rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700; }
+    header h1 span {
+      font-size: 2rem; }
 
 .navBg {
-  background-color: #687EFF; }
+  background-color: #687EFF;
+  width: 100%; }
   .navBg .navPrincipal {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 5rem;
-    padding: 0.5rem; }
+    height: 4rem;
+    width: 100%; }
     .navBg .navPrincipal a {
+      padding: 0.5rem;
       font-size: 2rem;
       font-weight: 400;
       color: white;
       text-decoration: none; }
+      .navBg .navPrincipal a:hover {
+        color: black; }
+
+.hero {
+  text-align: center;
+  height: calc(100vh - 9rem); }
