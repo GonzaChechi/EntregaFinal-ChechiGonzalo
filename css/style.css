@@ -1,14 +1,16 @@
-/*! -------------------------RESET-------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;700&display=swap");
 html {
   font-size: 62.5%;
   margin: 0rem;
   padding: 0rem;
   box-sizing: border-box; }
   html body {
-    font-size: 16px; }
-/*! -------------------------HEADER-------------------------------- */
+    font-size: 16px;
+    font-family: "Noto Sans", sans-serif; }
+
 header h1 {
   text-align: center;
-  font-size: 3.8rem; }
+  font-size: 3rem;
+  font-weight: 700; }
   header h1 span {
     font-size: 2rem; }
