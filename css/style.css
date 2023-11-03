@@ -8,9 +8,27 @@ html {
     font-size: 16px;
     font-family: "Noto Sans", sans-serif; }
 
+.contenedor {
+  width: 120rem;
+  margin: 0 auto; }
+
 header h1 {
   text-align: center;
   font-size: 3rem;
   font-weight: 700; }
   header h1 span {
     font-size: 2rem; }
+
+.navBg {
+  background-color: #687EFF; }
+  .navBg .navPrincipal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    padding: 0.5rem; }
+    .navBg .navPrincipal a {
+      font-size: 2rem;
+      font-weight: 400;
+      color: white;
+      text-decoration: none; }
