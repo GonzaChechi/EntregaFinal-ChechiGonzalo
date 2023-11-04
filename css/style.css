@@ -53,6 +53,9 @@ header {
       .navBg .navPrincipal a:hover {
         color: black; }
 
-.hero {
+.mainIndex .hero {
   text-align: center;
   height: calc(100vh - 9rem); }
+  .mainIndex .hero h2 span {
+    font-size: 2rem;
+    font-weight: 700; }

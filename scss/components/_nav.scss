@@ -15,18 +15,10 @@
             font-weight: nth($font-weight, 2);
             color: $color-cuarto;
             text-decoration: none;
-            &:hover{
+
+            &:hover {
                 color: $color-secundario;
             }
         }
     }
-}
-.hero{
-    text-align: center;
-    height:calc(100vh - 9rem);
-    // h2{
-    // }
-    // .imgCheckpoint{}
-    // p{}
-    // a{}
 }
