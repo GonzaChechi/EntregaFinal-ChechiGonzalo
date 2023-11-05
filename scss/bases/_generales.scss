@@ -1,5 +1,5 @@
 // !FUENTES
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;700&display=swap");
 
 //! RESET
 html {
@@ -11,28 +11,41 @@ html {
     body {
         font-size: 16px;
         font-family: "Noto Sans", sans-serif;
-        h1{
-            font-size: nth($font-size, 3 );
-            font-weight: nth($font-weight,3 );
+
+        h1 {
+            font-size: nth($font-size, 3);
+            font-weight: nth($font-weight, 3);
         }
-        h2{
-            font-size: nth($font-size, 2 );
-            font-weight: nth($font-weight,2 );
+
+        h2 {
+            font-size: nth($font-size, 2);
+            font-weight: nth($font-weight, 2);
         }
-        h3{
-            font-size: nth($font-size, 1 );
-            font-weight: nth($font-weight,2 );
+
+        h3 {
+            font-size: nth($font-size, 1);
+            font-weight: nth($font-weight, 2);
         }
-        p{
-            font-size: nth($font-size, 1 );
-            font-weight: nth($font-weight,1 );
+
+        p {
+            font-size: nth($font-size, 1);
+            font-weight: nth($font-weight, 1);
+        }
+        h1,h2,h3{
+            text-align: center;
         }
     }
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 //! CLASES GENERALES
 
-.contenedor{
+.contenedor {
     width: 120rem;
     margin: 0 auto;
 }

@@ -1,10 +1,18 @@
 // !PALETA DE COLORES
-$color-principal:#687EFF;
+$color-principal: #687EFF;
 $color-secundario: black;
-$color-terciario:#006185;
-$color-cuarto: white ;
+$color-terciario: #006185;
+$color-cuarto: white;
 
 // !ESTILO DE FUENTES
 $font-size: 2rem, 3rem, 4rem, 5rem;
 $font-weight: 200, 400, 700;
 
+//!FORMATO BOTONES
+%boton {
+        background-color:$color-principal;
+        color: $color-secundario;
+        font-size: nth($font-size, 1);
+        text-decoration: none;
+        padding:0.5rem;
+}
