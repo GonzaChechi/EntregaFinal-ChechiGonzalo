@@ -9,6 +9,7 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 1rem;
 
+
         .servicio {
             display: flex;
             flex-direction: column;
@@ -65,7 +66,8 @@
                         text-align: center;
                     }
 
-                    .correo,.textarea {
+                    .correo,
+                    .textarea {
                         grid-column: 1 / 3;
                     }
 

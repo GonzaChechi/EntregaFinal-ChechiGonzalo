@@ -7,7 +7,7 @@ html {
     margin: 0rem;
     padding: 0rem;
     box-sizing: border-box;
-
+    scroll-snap-type: y mandatory;
     body {
         font-size: 16px;
         font-family: "Noto Sans", sans-serif;
@@ -57,4 +57,9 @@ html {
     -moz-box-shadow: 0px 0px 11px 1px rgba(122,120,120,0.38);
     padding: 3rem;
     border-radius: 1rem;
+}
+
+.mainIndex,.navBg,.formularioIndex, .footer{
+    scroll-snap-align: center;
+    scroll-snap-stop:always;
 }
