@@ -1,0 +1,29 @@
+// !PALETA DE COLORES
+$color-principal: #687EFF;
+$color-secundario: black;
+$color-terciario: #006185;
+$color-cuarto: white;
+
+// !ESTILO DE FUENTES
+$font-size: 2rem, 3rem, 4rem, 5rem;
+$font-weight: 200, 400, 700;
+
+//!FORMATO BOTONES
+%boton {
+        background-color:$color-principal;
+        color: $color-cuarto;
+        font-size: nth($font-size, 1);
+        text-decoration: none;
+        padding:0.5rem;
+        text-transform: uppercase;
+        font-weight: nth($font-weight,3 );
+        border-radius: 0.5rem;
+        border: none;
+}
+
+%centrarFlex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}

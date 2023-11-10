@@ -1,0 +1,11 @@
+
+.header{
+    height: 5rem;
+    h1{
+        height: 100%;
+        margin: 0rem;
+        span{
+            font-size: nth($font-size ,1 );
+        }
+}
+}

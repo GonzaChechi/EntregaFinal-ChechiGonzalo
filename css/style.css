@@ -1,16 +1,223 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;700&display=swap");
+.hero .contenidoHero a, .mainIndex .formularioIndex form .botonFormIndex .boton {
+  background-color: #687EFF;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none; }
+
+.hero .contenidoHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 html {
   font-size: 62.5%;
   margin: 0rem;
   padding: 0rem;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+  background: linear-gradient(to top, rgba(224, 224, 224, 0.5) 0%, #ffffff 100%); }
   html body {
     font-size: 16px;
     font-family: "Noto Sans", sans-serif; }
+    html body h1 {
+      font-size: 4rem;
+      font-weight: 700; }
+    html body h2 {
+      font-size: 3rem;
+      font-weight: 400; }
+    html body h3 {
+      font-size: 2rem;
+      font-weight: 400; }
+    html body p {
+      font-size: 2rem;
+      font-weight: 200; }
+    html body h1, html body h2, html body h3 {
+      text-align: center; }
 
-header h1 {
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+.contenedor {
+  width: 120rem;
+  margin: 0 auto; }
+
+.sombra {
+  box-shadow: 0px 0px 11px 1px rgba(122, 120, 120, 0.38);
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(122, 120, 120, 0.38);
+  -moz-box-shadow: 0px 0px 11px 1px rgba(122, 120, 120, 0.38);
+  padding: 3rem;
+  border-radius: 1rem; }
+
+.mainIndex, .navBg, .formularioIndex, .footer {
+  scroll-snap-align: center;
+  scroll-snap-stop: always; }
+
+.header {
+  height: 5rem; }
+  .header h1 {
+    height: 100%;
+    margin: 0rem; }
+    .header h1 span {
+      font-size: 2rem; }
+
+.navBg {
+  background-color: #687EFF;
+  width: 100%; }
+  .navBg .navPrincipal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    width: 100%; }
+    .navBg .navPrincipal a {
+      padding: 0.5rem;
+      font-size: 2rem;
+      font-weight: 400;
+      color: white;
+      text-decoration: none; }
+      .navBg .navPrincipal a:hover {
+        color: black; }
+
+.hero {
+  height: 30rem;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0rem 2rem 0rem;
+  background-image: url(../../img/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+  .hero .contenidoHero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.548); }
+    .hero .contenidoHero h2 {
+      color: white; }
+      .hero .contenidoHero h2 span {
+        font-size: 2rem;
+        font-weight: 700; }
+    .hero .contenidoHero .heroUbicacion {
+      display: flex;
+      align-items: baseline; }
+      .hero .contenidoHero .heroUbicacion p {
+        color: white;
+        font-weight: 400; }
+
+.mainIndex {
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
-  font-size: 3rem;
-  font-weight: 700; }
-  header h1 span {
-    font-size: 2rem; }
+  background-color: white; }
+  .mainIndex .serviciosIndex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem; }
+    .mainIndex .serviciosIndex .servicio {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .mainIndex .serviciosIndex .servicio h3 {
+        color: #006185; }
+      .mainIndex .serviciosIndex .servicio .iconos {
+        width: 15rem;
+        height: 15rem;
+        background-color: #687EFF;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; }
+      .mainIndex .serviciosIndex .servicio p {
+        line-height: 2;
+        text-align: center; }
+  .mainIndex .formularioIndex form {
+    background-color: #006185;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem; }
+    .mainIndex .formularioIndex form fieldset {
+      border: none; }
+      .mainIndex .formularioIndex form fieldset legend {
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 0.6rem;
+        font-size: 2rem;
+        font-weight: 700; }
+      .mainIndex .formularioIndex form fieldset .camposFormIndex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem; }
+        .mainIndex .formularioIndex form fieldset .camposFormIndex .campo {
+          margin-bottom: 1rem;
+          text-align: center; }
+        .mainIndex .formularioIndex form fieldset .camposFormIndex .correo,
+        .mainIndex .formularioIndex form fieldset .camposFormIndex .textarea {
+          grid-column: 1 / 3; }
+        .mainIndex .formularioIndex form fieldset .camposFormIndex label {
+          color: white;
+          margin-bottom: 0.6rem;
+          display: block;
+          font-weight: 200;
+          font-size: 2rem;
+          text-align: start; }
+        .mainIndex .formularioIndex form fieldset .camposFormIndex textarea {
+          height: 15rem; }
+        .mainIndex .formularioIndex form fieldset .camposFormIndex .inputText {
+          width: 100%;
+          border: none;
+          padding: 1.5rem;
+          border-radius: 1rem; }
+    .mainIndex .formularioIndex form .botonFormIndex {
+      display: flex;
+      justify-content: flex-end; }
+      .mainIndex .formularioIndex form .botonFormIndex .boton:hover {
+        cursor: pointer; }
+
+.footer {
+  text-align: center; }
+
+@media screen and (max-width: 730px) {
+  .mainIndex .serviciosIndex {
+    grid-template-columns: 1fr; }
+  .mainIndex .formularioIndex form fieldset .camposFormIndex {
+    display: block; } }
+
+@media screen and (max-width: 600px) {
+  .mainIndex .serviciosIndex .servicio .iconos {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%; }
+  .mainIndex .serviciosIndex .servicio p {
+    font-size: 1.5rem; }
+  .mainIndex .formularioIndex form {
+    width: 100%;
+    margin: 0;
+    padding: 1rem; }
+    .mainIndex .formularioIndex form fieldset .botonFormIndex .boton {
+      width: 100%; } }
+
+@media screen and (max-width: 500px) {
+  .mainIndex .formularioIndex form fieldset legend {
+    font-size: 1.5rem; } }
+
+@media screen and (max-width: 435px) {
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 400; } }
+
+@media screen and (max-width: 390px) {
+  .mainIndex .formularioIndex form fieldset legend {
+    font-size: 1.2rem; } }
