@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <h1>Gonzalo Chechi <span>Freelancer</span></h1>
     </header>
 
@@ -105,33 +105,37 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam!</p>
             </section>
         </div>
-    </main>
-    <section>
-        <h2>Contacto</h2>
-        <form>
-            <fieldset>
-                <legend>Contactanos completando tus datos</legend>
-                <div>
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" placeholder="Tu Nombre" id="nombre">
-                </div>
-                <div>
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" name="telefono" placeholder="Tu Teléfono" id="tel">
-                </div>
-                <div>
-                    <label for="correo">Correo</label>
-                    <input type="email" name="correo" placeholder="Tu Correo" id="correo">
-                </div>
-                <div>
-                    <label for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje"></textarea>
-                </div>
-                <div><input type="submit" value="Enviar"></div>
-            </fieldset>
+        <section class="formularioIndex">
+            <h2>Contacto</h2>
+            <form>
+                <fieldset>
+                    <legend>Contactanos completando tus datos</legend>
+                    <div class="camposFormIndex">
+                        <div class="campo">
+                            <label for="nombre">Nombre</label>
+                            <input class="inputText" type="text" name="nombre" placeholder="Tu Nombre" id="nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input class="inputText" type="tel" name="telefono" placeholder="Tu Teléfono" id="tel">
+                        </div>
+                        <div class="campo correo">
+                            <label for="correo">Correo</label>
+                            <input class="inputText" type="email" name="correo" placeholder="Tu Correo" id="correo">
+                        </div>
+                        <div class="campo textarea">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="inputText" name="mensaje" id="mensaje"></textarea>
+                        </div>
+                    </div>
+                    <div class="botonFormIndex">
+                        <input class="boton" type="submit" value="Enviar">
+                    </div>
+                </fieldset>
 
-        </form>
-    </section>
+            </form>
+        </section>
+    </main>
     <footer>
         <p>Todos los derechos reservados Gonzalo Chechi Freelancer</p>
     </footer>
