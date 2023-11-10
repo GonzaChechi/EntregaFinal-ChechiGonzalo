@@ -59,7 +59,7 @@ html {
     border-radius: 1rem;
 }
 
-.mainIndex,.navBg,.formularioIndex, .footer{
+.navBg, .mainIndex,.formularioIndex,.footer{
     scroll-snap-align: center;
     scroll-snap-stop:always;
 }
