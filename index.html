@@ -20,9 +20,9 @@
     <div class="navBg">
         <nav class="navPrincipal contenedor">
             <a href="index.html">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Clientes</a>
-            <a href="#">Contactos</a>
+            <a id="navNosotros" href="#">Nosotros</a>
+            <a id="navClientes" href="#">Clientes</a>
+            <a id="navContactos" href="#">Contactos</a>
         </nav>
     </div>
     <section class="hero ">
@@ -107,13 +107,13 @@
         </div>
         <section class="formularioIndex">
             <h2>Contacto</h2>
-            <form>
+            <form id="formularioContacto">
                 <fieldset>
                     <legend>Contactanos completando tus datos</legend>
                     <div class="camposFormIndex">
                         <div class="campo">
                             <label for="nombre">Nombre</label>
-                            <input class="inputText" type="text" name="nombre" placeholder="Tu Nombre" id="nombre">
+                            <input class="inputText" type="text" name="nombre" placeholder="Tu Nombre" id="nombre" >
                         </div>
                         <div class="campo">
                             <label for="telefono">Teléfono</label>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="campo correo">
                             <label for="correo">Correo</label>
-                            <input class="inputText" type="email" name="correo" placeholder="Tu Correo" id="correo">
+                            <input class="inputText" type="email" name="correo" placeholder="Tu Correo" id="correo" >
                         </div>
                         <div class="campo textarea">
                             <label for="mensaje">Mensaje</label>
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                     <div class="botonFormIndex">
-                        <input class="boton" type="submit" value="Enviar">
+                        <input class="boton" type="submit" value="Enviar" id="submit">
                     </div>
                 </fieldset>
 
@@ -139,6 +139,10 @@
     <footer class="footer">
         <p>Todos los derechos reservados Gonzalo Chechi Freelancer</p>
     </footer>
+    <script src="js/navBar.js"></script>
+    <script src="js/personas.js"></script>
+    <script src="js/formulario.js"></script>
+    
 
 </body>
 

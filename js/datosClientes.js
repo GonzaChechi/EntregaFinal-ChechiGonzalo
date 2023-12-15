@@ -1,0 +1,1 @@
+const contenedorClientes = document.getElementById("contenedorClientes");
