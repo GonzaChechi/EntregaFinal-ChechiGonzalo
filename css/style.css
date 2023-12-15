@@ -22,6 +22,18 @@
   padding: 1.5rem;
   border-radius: 1rem; }
 
+.borderContendor {
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 70%;
+  height: 200px; }
+
+.centrarFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 html {
   font-size: 62.5%;
   margin: 0rem;
