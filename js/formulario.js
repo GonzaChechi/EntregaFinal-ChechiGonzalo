@@ -16,7 +16,6 @@ inputSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     registrarCliente();
     limpiarFormulario(formRegister);
-    // almacenarClientes();
 });
 
 // tomamos datos de clientes y lo almacenamos en local storage haciendo validacion para qeu se completen todos lso campos de contacto
@@ -61,11 +60,3 @@ function registrarCliente() {
 function limpiarFormulario(formulario) {
     formulario.reset();
 }
-
-// traemos los datos del local storage para luego poder almacenarlos en una base de datos y darles el uso correcto
-
-// function almacenarClientes() {
-//     for (i = 1; i < sessionStorage.length; i++) {
-//         listaClientes.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
-//     }
-// }

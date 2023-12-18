@@ -1,5 +1,5 @@
 const contenedorClientes = document.getElementById("sectionClientes");
-const listaClientes = [];
+let listaClientes = [];
 
 for (i = 1; i < sessionStorage.length; i++) {
     
