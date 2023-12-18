@@ -22,12 +22,21 @@
   padding: 1.5rem;
   border-radius: 1rem; }
 
+.borderContendor {
+  border: 3px solid black;
+  border-radius: 5px; }
+
+.centrarFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 html {
   font-size: 62.5%;
   margin: 0rem;
   padding: 0rem;
   box-sizing: border-box;
-  scroll-snap-type: y mandatory;
   background: linear-gradient(to top, rgba(224, 224, 224, 0.5) 0%, #ffffff 100%); }
   html body {
     font-size: 16px;

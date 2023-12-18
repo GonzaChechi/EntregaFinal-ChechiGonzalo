@@ -7,20 +7,18 @@ const inputEmail = document.getElementById("correo");
 const inputMensaje = document.getElementById("mensaje");
 const inputSubmit = document.getElementById("submit");
 const formRegister = document.getElementById("formularioContacto");
-
-
+let listaClientes = [];
 
 //agregamos los eventos
 
 inputSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     registrarCliente();
-    
     limpiarFormulario(formRegister);
     almacenarClientes();
 });
 
-// tomamos datos de clientes y lo almacenamos en local storage
+// tomamos datos de clientes y lo almacenamos en local storage haciendo validacion para qeu se completen todos lso campos de contacto
 function registrarCliente() {
     if (inputNombre.value === "" || +inputTelefono.value === 0 || inputEmail.value === "") {
         inputNombre.setAttribute("placeholder", ">>INGRESE EL NOMBRE<<");
@@ -58,23 +56,18 @@ function registrarCliente() {
 
 }
 
-
 // limpiamos el formulario
 function limpiarFormulario(formulario) {
     formulario.reset();
 }
 
-
 // traemos los datos del local storage para luego poder almacenarlos en una base de datos y darles el uso correcto
 
 function almacenarClientes() {
-    let ListaCliente = [];
+    
     for (i = 1; i < sessionStorage.length; i++) {
-        ListaCliente.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
+        listaClientes.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
     }
     console.clear();
-    console.log(ListaCliente);
+    console.log(listaClientes);
 }
-
-
-
