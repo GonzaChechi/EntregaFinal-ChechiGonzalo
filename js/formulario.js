@@ -16,7 +16,7 @@ inputSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     registrarCliente();
     limpiarFormulario(formRegister);
-    almacenarClientes();
+    // almacenarClientes();
 });
 
 // tomamos datos de clientes y lo almacenamos en local storage haciendo validacion para qeu se completen todos lso campos de contacto
