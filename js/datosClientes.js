@@ -1,5 +1,8 @@
 const contenedorClientes = document.getElementById("sectionClientes");
+const listaClientes = [];
+
 for (i = 1; i < sessionStorage.length; i++) {
+    
     listaClientes.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
 }
 
@@ -11,7 +14,7 @@ if (localStorage.getItem("contador") === null) {
     
     contenedorClientes.innerHTML = ``;
     listaClientes.forEach((elemento, index) => {
-        contenedorClientes.innerHTML = contenedorClientes.innerHTML + `
+    contenedorClientes.innerHTML = contenedorClientes.innerHTML + `
     <div class="borderContenedor centrarFlex">
         <h3> Cliente: ${index + 1}</h3> 
         Nombre: <b>${elemento.nombre}</b> <br>

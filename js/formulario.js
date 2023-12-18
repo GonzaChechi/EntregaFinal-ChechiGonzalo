@@ -7,7 +7,7 @@ const inputEmail = document.getElementById("correo");
 const inputMensaje = document.getElementById("mensaje");
 const inputSubmit = document.getElementById("submit");
 const formRegister = document.getElementById("formularioContacto");
-let listaClientes = [];
+
 
 
 //agregamos los eventos
@@ -64,8 +64,8 @@ function limpiarFormulario(formulario) {
 
 // traemos los datos del local storage para luego poder almacenarlos en una base de datos y darles el uso correcto
 
-function almacenarClientes() {
-    for (i = 1; i < sessionStorage.length; i++) {
-        listaClientes.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
-    }
-}
+// function almacenarClientes() {
+//     for (i = 1; i < sessionStorage.length; i++) {
+//         listaClientes.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
+//     }
+// }
