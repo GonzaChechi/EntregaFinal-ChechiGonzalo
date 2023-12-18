@@ -1,7 +1,7 @@
 const contenedorClientes = document.getElementById("sectionClientes");
 let listaClientes = [];
 
-for (i = 1; i < sessionStorage.length; i++) {
+for (i = 1; i <= sessionStorage.length; i++) {
     
     listaClientes.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
 }
