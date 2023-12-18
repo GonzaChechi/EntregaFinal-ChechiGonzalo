@@ -65,15 +65,7 @@ function limpiarFormulario(formulario) {
 // traemos los datos del local storage para luego poder almacenarlos en una base de datos y darles el uso correcto
 
 function almacenarClientes() {
-<<<<<<< HEAD
-    
     for (i = 1; i < sessionStorage.length; i++) {
-=======
-    let listaClientes = [];
-    for (i = 1; i <= sessionStorage.length; i++) {
->>>>>>> cf8dfdb6110ba5fee0460b8a0b926f292c5dac5f
         listaClientes.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
     }
-    console.clear();
-    console.log(listaClientes);
 }

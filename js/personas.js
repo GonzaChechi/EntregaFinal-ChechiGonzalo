@@ -5,12 +5,4 @@ class Cliente {
         this.correo = correo;
         this.mensaje = mensaje;
     }
-    info(){
-        return `
-        Nombre: <b>${this.nombre}</b> <br>
-        Telefono: <b>${this.telefono}</b> <br>
-        Correo: <b>${this.correo}</b> <br>
-        Mensaje: <b>${this.mensaje}</b> <br>
-        `
-    }
 }
