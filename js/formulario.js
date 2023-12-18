@@ -9,6 +9,7 @@ const inputSubmit = document.getElementById("submit");
 const formRegister = document.getElementById("formularioContacto");
 let listaClientes = [];
 
+
 //agregamos los eventos
 
 inputSubmit.addEventListener("click", (e) => {
@@ -24,7 +25,7 @@ function registrarCliente() {
         inputNombre.setAttribute("placeholder", ">>INGRESE EL NOMBRE<<");
         inputNombre.classList.remove("inputText");
         inputNombre.classList.add("pushBotton");
-        inputTelefono.setAttribute("placeholder", ">>INGRESE EL TELEFONO<<");
+        inputTelefono.setAttribute("placeholder", ">>INGRESE TELEFONO<<");
         inputTelefono.classList.remove("inputText");
         inputTelefono.classList.add("pushBotton");
         inputEmail.setAttribute("placeholder", ">>INGRESE EL CORREO<<");
@@ -64,8 +65,13 @@ function limpiarFormulario(formulario) {
 // traemos los datos del local storage para luego poder almacenarlos en una base de datos y darles el uso correcto
 
 function almacenarClientes() {
+<<<<<<< HEAD
     
     for (i = 1; i < sessionStorage.length; i++) {
+=======
+    let listaClientes = [];
+    for (i = 1; i <= sessionStorage.length; i++) {
+>>>>>>> cf8dfdb6110ba5fee0460b8a0b926f292c5dac5f
         listaClientes.push(JSON.parse(sessionStorage.getItem("Cliente" + i)));
     }
     console.clear();

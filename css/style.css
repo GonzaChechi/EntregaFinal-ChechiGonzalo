@@ -24,7 +24,13 @@
 
 .borderContendor {
   border: 3px solid black;
+<<<<<<< HEAD
   border-radius: 5px; }
+=======
+  border-radius: 5px;
+  width: 70%;
+  height: 200px; }
+>>>>>>> cf8dfdb6110ba5fee0460b8a0b926f292c5dac5f
 
 .centrarFlex {
   display: flex;
