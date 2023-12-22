@@ -35,10 +35,6 @@
                 font-weight: nth($font-weight,2 )
             }
         }
-
-        a {
-            @extend %boton;
-        }
     }
 
 }

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;700&display=swap");
-.hero .contenidoHero a, .mainIndex .formularioIndex form .botonFormIndex .boton {
-  background-color: #687EFF;
+.boton {
+  background-color: #687eff;
   color: white;
   font-size: 2rem;
   text-decoration: none;
@@ -9,6 +9,8 @@
   font-weight: 700;
   border-radius: 0.5rem;
   border: none; }
+  .boton:hover {
+    cursor: pointer; }
 
 .hero .contenidoHero {
   display: flex;
@@ -22,13 +24,32 @@
   padding: 1.5rem;
   border-radius: 1rem; }
 
-.borderContendor {
-  border: 3px solid black;
-  border-radius: 5px; }
+.borderContenedor {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 30%;
+  margin: 5px auto;
+  background: #006180;
+  background: linear-gradient(188deg, #006180 39%, white 100%);
+  box-shadow: 8px 7px 79px -14px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 8px 7px 79px -14px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 8px 7px 79px -14px rgba(0, 0, 0, 0.59); }
 
 .centrarFlex {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.textArea {
+  height: 130px;
+  width: 80%;
+  margin: 10px;
+  border: none;
+  border-radius: 5px; }
+
+.centrar {
+  display: flex;
   justify-content: center;
   align-items: center; }
 
@@ -85,7 +106,7 @@ html {
       font-size: 2rem; }
 
 .navBg {
-  background-color: #687EFF;
+  background-color: #687eff;
   width: 100%; }
   .navBg .navPrincipal {
     display: flex;
@@ -148,7 +169,7 @@ html {
       .mainIndex .serviciosIndex .servicio .iconos {
         width: 15rem;
         height: 15rem;
-        background-color: #687EFF;
+        background-color: #687eff;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -198,8 +219,6 @@ html {
     .mainIndex .formularioIndex form .botonFormIndex {
       display: flex;
       justify-content: flex-end; }
-      .mainIndex .formularioIndex form .botonFormIndex .boton:hover {
-        cursor: pointer; }
 
 .footer {
   text-align: center; }

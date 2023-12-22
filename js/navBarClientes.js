@@ -4,7 +4,5 @@ navPrincipal.removeChild(document.getElementById("navContactos"));
 const navClientes = document.getElementById("navClientes");
 const navDatos = document.createElement("A");
 navDatos.textContent="Consultas Clientes";
-navDatos.setAttribute("href","pages/clientes.html");
+navDatos.setAttribute("href","clientes.html");
 navPrincipal.replaceChild(navDatos,navClientes);
-
-
