@@ -1,32 +1,35 @@
-const contenedorRespuestas = document.getElementById("respuestasClientes");
+id = [];
+const alertRespuesta = [];
+listaClientes.forEach((elemento, index) => {
+    alertRespuesta.push(document.getElementById(`botonResponder${index + 1}`));
+});
 
-traerJSON();
+for (let i = 0; i < alertRespuesta.length; i++) {
+    if (alertRespuesta[i] !== null) {
+        alertRespuesta[i].addEventListener("click", createAlert(i));
+    }
 
-contenedorRespuestas.innerHTML = ``;
-debugger;
-    listaClientes.forEach((elemento, index) => {
-        let { nombre, mensaje, respuesta } = elemento;
-        if (respuesta == null) {
-            contenedorRespuestas.innerHTML = contenedorRespuestas.innerHTML + `
-            <div class="borderContenedor centrarFlex " id="respCliente${index + 1}">
-            <h2> Cliente: ${index + 1}</h2> 
-            <label for="nombre">Nombre:</label> <b>${nombre}</b> <br>
-            <label for="mensaje">Mensaje:</label> <b>${mensaje}</b> <br>
-            <label for="respuesta">Respuesta</label>
-            <textarea class="textArea" name="respuesta" id="respuesta"></textarea>          
-            <a class="boton">Enviar Respuesta</a> <br><br>
-        </div>
-        `;
-        // }else{
-        //     contenedorRespuestas.innerHTML = `
-        //     <div class="borderContenedor centrarFlex " id="respCliente${index + 1}">
-        //     <h2> Cliente: ${index + 1}</h2> 
-        //     <label for="nombre">Nombre:</label> <b>${nombre}</b> <br>
-        //     <label for="mensaje">Mensaje:</label> <b>${mensaje}</b> <br>
-        //     <label for="respuesta">Respuesta</label>
-        //     <label for="mensaje">Mensaje:</label> <b>${respuesta}</b> <br>
-        // </div>
-        // `;
-        }
+}
 
-    });
+
+function createAlert(index) {
+    return function () {
+        (async () => {
+            const { value: text } = await Swal.fire({
+                input: "textarea",
+                inputLabel: `Responder Mensaje de: ${listaClientes[index].nombre}`,
+                inputPlaceholder: `${listaClientes[index].mensaje}`,
+                inputAttributes: {
+                    "aria-label": "Type your message here"
+                },
+                showCancelButton: true
+            });
+            if (text) {
+                Swal.fire(text);
+                const clienteConRespuesta = { ...listaClientes[index], respuesta: text };
+                listaClientes[index] = clienteConRespuesta;
+                sessionStorage.setItem(`Cliente${index + 1}`, almacenarJSON(listaClientes[index]));
+            }
+        })();
+    };
+}

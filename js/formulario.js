@@ -13,14 +13,14 @@ const formRegister = document.getElementById("formularioContacto");
 //agregamos los eventos
 
 inputSubmit.addEventListener("click", (e) => {
-    e.preventDefault();
+    e.preventDefault(); //anulo efecto por default de boton input
     registrarCliente(validarCampos());
     limpiarFormulario(formRegister);
 });
 
-// tomamos datos de clientes y lo almacenamos en local storage haciendo validacion para qeu se completen todos los campos de contacto
+// tomamos datos de clientes y lo almacenamos en local storage haciendo validacion para que se completen todos los campos de contacto
 function validarCampos() {
-    const validacionCampos = inputNombre.value && +inputTelefono.value && inputEmail.value ;
+    const validacionCampos = inputNombre.value && +inputTelefono.value && inputEmail.value;
     return validacionCampos;
 }
 
@@ -36,8 +36,8 @@ function registrarCliente(validacionCampos) {
         inputEmail.setAttribute("placeholder", "Tu Correo");
         inputEmail.classList.add("inputText");
         inputEmail.classList.remove("pushBotton");
-        const nuevoCliente = new Cliente(inputNombre.value, +inputTelefono.value, inputEmail.value, inputMensaje.value);
-        const nuevoClienteJSON = almacenarJSON(nuevoCliente);
+        const nuevoCliente = new Cliente(inputNombre.value, +inputTelefono.value, inputEmail.value, inputMensaje.value); //se crea objeto de cliente
+        const nuevoClienteJSON = almacenarJSON(nuevoCliente); //se convierte el objeto a JSON funcion almacenar JSON se encuentra en funcionesAuxiliares
         if (localStorage.getItem("contador") === null) {
             sessionStorage.setItem("Cliente" + "1", nuevoClienteJSON);
             localStorage.setItem("contador", "1");
@@ -47,7 +47,14 @@ function registrarCliente(validacionCampos) {
             sessionStorage.setItem("Cliente" + contador, nuevoClienteJSON);
             localStorage.setItem("contador", contador);
         }
-        alert("Su consulta ha sido enviada, será contactado a la brevedad");
+
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Su consulta ha sido enviada, será contactado a la brevedad",
+            showConfirmButton: false,
+            timer: 2000
+        })
     } else {
         inputNombre.setAttribute("placeholder", ">>INGRESE EL NOMBRE<<");
         inputNombre.classList.remove("inputText");
