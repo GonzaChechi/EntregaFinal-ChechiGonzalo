@@ -1,5 +1,4 @@
 const contenedorClientes = document.getElementById("sectionClientes");
-debugger;
 traerJSON(); //funcion que se encuentra en funciones auxiliares
 if (localStorage.getItem("contador") == null) {
     Swal.fire({
