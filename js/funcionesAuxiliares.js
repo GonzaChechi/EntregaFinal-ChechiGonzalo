@@ -1,5 +1,4 @@
 let listaClientes = [];
-let listaIndices = [];
 
 //enviamos objeto al sessionStorage
 function traerJSON() {

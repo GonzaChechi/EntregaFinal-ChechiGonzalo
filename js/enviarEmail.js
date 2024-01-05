@@ -7,6 +7,7 @@ botonesEnviarMail.forEach((boton, index) => {
     if (boton!== null) {
         boton.addEventListener("click", () => {
             const cliente = listaClientes[index];
+            debugger;
             enviarPorFormSubmit(cliente,index);
         });
     }
@@ -38,7 +39,7 @@ function enviarPorFormSubmit(datosCliente,index) {
                 console.error('Error al enviar el correo electrónico a través de FormSubmit');
                 Swal.fire({
                     title: "Correo no se pudo enviar!",
-                    icon: "success"
+                    icon: "error"
                 });
             }
         })
