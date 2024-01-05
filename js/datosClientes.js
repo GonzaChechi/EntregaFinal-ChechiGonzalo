@@ -1,7 +1,7 @@
 const contenedorClientes = document.getElementById("sectionClientes");
 
 traerJSON(); //funcion que se encuentra en funciones auxiliares
-if (localStorage.getItem("contador") == null && listaIndices[0] == null) {
+if (localStorage.getItem("contador") == null) {
     Swal.fire({
         title: "Lo sentimos",
         text: "Aún no se ha contactado ningun cliente",
