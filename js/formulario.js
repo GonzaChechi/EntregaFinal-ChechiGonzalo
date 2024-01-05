@@ -18,10 +18,13 @@ inputSubmit.addEventListener("click", (e) => {
     limpiarFormulario(formRegister);
 });
 
-// tomamos datos de clientes y lo almacenamos en local storage haciendo validacion para que se completen todos los campos de contacto
+// tomamos datos de clientes y lo almacenamos en local storage haciendo validacion para que se completen todos los campos de contacto correctamente
 function validarCampos() {
-    const validacionCampos = inputNombre.value && +inputTelefono.value && inputEmail.value;
-    return validacionCampos;
+        const nombreValido = inputNombre.value.trim() !== '';
+        const telefonoValido = /^\d+$/.test(inputTelefono.value.trim());
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputEmail.value.trim());
+    
+        return nombreValido && telefonoValido && emailValido;
 }
 
 function registrarCliente(validacionCampos) {
@@ -42,12 +45,11 @@ function registrarCliente(validacionCampos) {
             sessionStorage.setItem("Cliente" + "1", nuevoClienteJSON);
             localStorage.setItem("contador", "1");
         } else {
-            let contador = localStorage.getItem("contador");
+            let contador = parseInt(localStorage.getItem("contador"));
             contador++;
             sessionStorage.setItem("Cliente" + contador, nuevoClienteJSON);
-            localStorage.setItem("contador", contador);
-        }
-
+            localStorage.setItem("contador", contador.toString());
+        }             
         Swal.fire({
             position: "top-end",
             icon: "success",

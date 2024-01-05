@@ -3,15 +3,16 @@ listaClientes.forEach((elemento, index) => {
     botonesEnviarMail.push(document.getElementById(`botonEnviarMail${index+1}`)) ;
 });
 
-
 botonesEnviarMail.forEach((boton, index) => {
-    boton.addEventListener('click', () => {
-        const cliente = listaClientes[index];
-        enviarPorFormSubmit(cliente);
-    });
+    if (boton!== null) {
+        boton.addEventListener("click", () => {
+            const cliente = listaClientes[index];
+            enviarPorFormSubmit(cliente,index);
+        });
+    }
 });
 
-function enviarPorFormSubmit(datosCliente) {
+function enviarPorFormSubmit(datosCliente,index) {
     const urlFormSubmit = `https://formsubmit.co/${datosCliente.correo}`;
     const payload = {
         to: "Gonzalo Chechi Freelancer",

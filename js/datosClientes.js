@@ -20,7 +20,7 @@ if (localStorage.getItem("contador") == null && listaIndices[0] == null) {
             <label for="correo">Correo:</label> <b>${correo}</b> <br>
             <label for="mensaje">Mensaje:</label> <b class="ajusteMensaje" >${mensaje}</b> <br>
             <div class="centrar">
-            <a class="boton" id="botonResponder${index + 1}">Responder</a> <br><br></br>
+            <a class="boton " id="botonResponder${index + 1}">Responder</a> <br><br></br>
             </div>
         </div>
         `;
@@ -32,7 +32,7 @@ if (localStorage.getItem("contador") == null && listaIndices[0] == null) {
                 <label for="telefono">Telefono:</label> <b>${telefono}</b> <br>
                 <label for="correo">Correo:</label> <b>${correo}</b> <br>
                 <label for="mensaje">Mensaje:</label> <b class="ajusteMensaje" >${mensaje}</b> <br>
-                <div class="centrar centrarFlex">
+                <div class="centrar centrarFlex" id="contRespuesta">
                 <label for="respuesta">Respuesta:</label><b>${respuesta}</b> <br>
                 <a class="boton" id="botonEnviarMail${index+1}">Enviar por Email</a> <br
                 </div>
