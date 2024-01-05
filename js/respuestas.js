@@ -1,4 +1,3 @@
-id = [];
 const alertRespuesta = [];
 listaClientes.forEach((elemento, index) => {
     alertRespuesta.push(document.getElementById(`botonResponder${index + 1}`));
@@ -25,10 +24,16 @@ function createAlert(index) {
                 showCancelButton: true
             });
             if (text) {
-                Swal.fire(text);
-                const clienteConRespuesta = { ...listaClientes[index], respuesta: text };
-                listaClientes[index] = clienteConRespuesta;
-                sessionStorage.setItem(`Cliente${index + 1}`, almacenarJSON(listaClientes[index]));
+                Swal.fire({
+                    title: "Respuesta enviada",
+                    text: text,
+                    icon: "success"
+                }).then(() => {
+                    const clienteConRespuesta = { ...listaClientes[index], respuesta: text };
+                    listaClientes[index] = clienteConRespuesta;
+                    sessionStorage.setItem(`Cliente${index + 1}`, almacenarJSON(listaClientes[index]));
+                    location.reload();
+                });
             }
         })();
     };

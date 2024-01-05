@@ -53,7 +53,7 @@ function registrarCliente(validacionCampos) {
             icon: "success",
             title: "Su consulta ha sido enviada, será contactado a la brevedad",
             showConfirmButton: false,
-            timer: 2000
+            timer: 1500
         })
     } else {
         inputNombre.setAttribute("placeholder", ">>INGRESE EL NOMBRE<<");

@@ -6,3 +6,18 @@ const navDatos = document.createElement("A");
 navDatos.textContent = "Consultas Clientes";
 navDatos.setAttribute("href", "clientes.html");
 navPrincipal.replaceChild(navDatos, navClientes);
+
+const limpiarStorage = document.getElementById("limpiarStorage");
+
+
+limpiarStorage.addEventListener(`click`,()=>{
+    sessionStorage.clear();
+    localStorage.clear();
+    Swal.fire({
+        title: "Limpieza de Storage",
+        text: "Local y Session Storage fueron limpiados",
+        icon: "success"
+    }).then(() => {
+        location.reload();
+    });
+})
